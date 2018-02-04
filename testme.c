@@ -4,15 +4,22 @@
 #include<time.h>
 
 char inputChar()
-{
-    // TODO: rewrite this function
-    return ' ';
+{	
+	//Generate Characters from space to ~
+	char c = (rand() % (127 - ' ')) + ' ';
+  	return c;
 }
 
 char *inputString()
 {
-    // TODO: rewrite this function
-    return "";
+    int length = 6;
+    char* s = malloc(length);
+    for(int i = 0;i<length-1;i++){
+    	//Generate Characters from a to z
+    	s[i] = (rand() % ('z'- 'a' + 1)) + 'a';
+    }
+    s[length-1] = '\0';
+    return s;
 }
 
 void testme()
